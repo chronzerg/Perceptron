@@ -1,4 +1,4 @@
-#include "../include/perceptron.hpp"
+#include "../includes/perceptron.hpp"
 #include <vector>
 
 namespace perceptron {
@@ -15,6 +15,17 @@ P::Perceptron(int dimensions)
 {
     P::dimensions_ = dimensions;
     P::weights_ = new std::vector<int>(dimensions);
+}
+
+P::Perceptron(const std::vector<int>& weights)
+{
+    P::dimensions = weights.size();
+    P::weights_ = new std::vector(weights);
+}
+
+P::Perceptron(Perceptron perceptron)
+{
+    // TODO
 }
 
 P::~Perceptron()

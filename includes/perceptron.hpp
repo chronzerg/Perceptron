@@ -9,8 +9,11 @@ class Perceptron
 {
 public:
     Perceptron(int dimensions);
+    Perceptron(vector<int> weights);
+    Perceptron(Perceptron perceptron);
     ~Perceptron();
     bool Evaluate(std::vector<int>& input);
+    std::vector<int> GetWeights();
     friend class Trainer;
 
 private:
