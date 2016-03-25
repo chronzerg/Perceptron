@@ -40,8 +40,8 @@ else
 
 ## API
 
-__working on it...__
+_working on it..._
 
 ## Examples
 
-__working on it...__
+_working on it..._
