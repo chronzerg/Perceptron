@@ -1,12 +1,15 @@
-#ifndef _PERCEPTRON_HPP_INCLUDED_
-#define _PERCEPTRON_HPP_INCLUDED_
+#ifndef PERCEPTRON_HPP_INCLUDED_
+#define PERCEPTRON_HPP_INCLUDED_
 
 #include <vector>
+
+namespace perceptron {
 
 class Perceptron
 {
 public:
     Perceptron(int dimensions);
+    ~Perceptron();
     bool Evaluate(std::vector<int>& input);
     friend class Trainer;
 
@@ -29,4 +32,6 @@ private:
     float rate_;
 };
 
-#endif
+} // namespace perceptron
+
+#endif // PERCEPTRON_HPP_INCLUDED_
