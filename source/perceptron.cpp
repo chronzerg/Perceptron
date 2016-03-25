@@ -13,19 +13,12 @@ typedef std::vector<int>::iterator iter;
 
 P::Perceptron(int dimensions)
 {
-    P::dimensions_ = dimensions;
     P::weights_ = new std::vector<int>(dimensions);
 }
 
 P::Perceptron(const std::vector<int>& weights)
 {
-    P::dimensions = weights.size();
-    P::weights_ = new std::vector(weights);
-}
-
-P::Perceptron(Perceptron perceptron)
-{
-    // TODO
+    P::weights_ = new std::vector<int>(weights);
 }
 
 P::~Perceptron()
@@ -47,6 +40,11 @@ bool P::Evaluate(std::vector<int>& inputs)
     }
 
     return (dot_product > 0);
+}
+
+std::vector<int>* P::GetWeights()
+{
+    return new std::vector<int>(*P::weights_);
 }
 
 

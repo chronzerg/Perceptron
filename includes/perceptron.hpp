@@ -9,15 +9,15 @@ class Perceptron
 {
 public:
     Perceptron(int dimensions);
-    Perceptron(vector<int> weights);
-    Perceptron(Perceptron perceptron);
+    Perceptron(const std::vector<int>& weights);
     ~Perceptron();
+
     bool Evaluate(std::vector<int>& input);
-    std::vector<int> GetWeights();
+    std::vector<int>* GetWeights();
+
     friend class Trainer;
 
 private:
-    int dimensions_;
     std::vector<int>* weights_;
 };
 
@@ -31,7 +31,6 @@ public:
 
 private:
     Perceptron* trainee_;
-    int dimensions_;
     float rate_;
 };
 
