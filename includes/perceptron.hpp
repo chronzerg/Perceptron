@@ -13,7 +13,7 @@ public:
     ~Perceptron();
 
     bool Evaluate(std::vector<int>& input);
-    std::vector<int>* GetWeights();
+    std::vector<int>* GetWeights() const;
 
     friend class Trainer;
 

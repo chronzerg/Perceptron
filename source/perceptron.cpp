@@ -42,7 +42,7 @@ bool P::Evaluate(std::vector<int>& inputs)
     return (dot_product > 0);
 }
 
-std::vector<int>* P::GetWeights()
+std::vector<int>* P::GetWeights() const
 {
     return new std::vector<int>(*P::weights_);
 }
